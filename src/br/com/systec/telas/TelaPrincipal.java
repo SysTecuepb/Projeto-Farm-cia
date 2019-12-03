@@ -107,6 +107,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         menCadFor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_MASK));
         menCadFor.setText("Fornecedor");
+        menCadFor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menCadForActionPerformed(evt);
+            }
+        });
         menCad.add(menCadFor);
 
         menCadPro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK));
@@ -268,6 +273,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         funcionario.setVisible(true);
         Desktop.add(funcionario);
     }//GEN-LAST:event_menCadFunActionPerformed
+
+    private void menCadForActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menCadForActionPerformed
+        // chama TelaFornecedor
+        TelaFornecedor fornecedor = new TelaFornecedor();
+        fornecedor.setVisible(true);
+        Desktop.add(fornecedor);
+    }//GEN-LAST:event_menCadForActionPerformed
 
     /**
      * @param args the command line arguments
