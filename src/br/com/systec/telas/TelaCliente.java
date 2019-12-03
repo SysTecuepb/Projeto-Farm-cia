@@ -100,8 +100,8 @@ public class TelaCliente extends javax.swing.JInternalFrame {
         txtCliEnd.setText(tblClientes.getModel().getValueAt(setar, 5).toString());
 
     }
-
-    //método para alterar dados do cliente
+    
+        //método para alterar dados do cliente
     private void alterar() {
         String sql = "update tb_cliente set cpf_cliente=?,nome_cliente=?,email_cliente=?,telefone_cliente=?,endereco_cliente=? where id_cliente=?";
         try {
