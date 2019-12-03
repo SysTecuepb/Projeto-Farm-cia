@@ -168,6 +168,34 @@ public class TelaProduto extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }
+    
+    // método responsável pela remoção do produto
+    private void remover() {
+        //confirma a remoção do produto
+        int confirma = JOptionPane.showConfirmDialog(null, "Tem certeza que deseja remover esse Produto", "Atenção", JOptionPane.YES_NO_OPTION);
+        if (confirma == JOptionPane.YES_OPTION) {
+            String sql = "delete from tb_produto where id_produto=?";
+            try {
+                pst = conexao.prepareStatement(sql);
+                pst.setString(1, txtForId.getText());
+                int apagado = pst.executeUpdate();
+                if (apagado > 0) {
+                    JOptionPane.showMessageDialog(null, "Produto Removido com Sucesso");
+
+                    //limpam os campos
+                    txtProCodigo.setText(null);
+                    txtProNome.setText(null);
+                    txtProValor.setText(null);
+                    txtProQuant.setText(null);
+                    txtForId.setText(null);
+                    btnProAdicionar.setEnabled(true);
+
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e);
+            }
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -441,7 +469,7 @@ public class TelaProduto extends javax.swing.JInternalFrame {
 
     private void btnProRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProRemoverActionPerformed
         // chama método para remover cliente
-        // remover();
+        remover();
     }//GEN-LAST:event_btnProRemoverActionPerformed
 
     private void btnProAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProAdicionarActionPerformed
