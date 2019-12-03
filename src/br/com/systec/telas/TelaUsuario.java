@@ -10,7 +10,7 @@ package br.com.systec.telas;
  * @author Júnior
  */
 import java.sql.*;
-import br.com.systec.dal.ModuloConexao;
+import br.com.systec.dao.ModuloConexao;
 import javax.swing.JOptionPane;
 
 public class TelaUsuario extends javax.swing.JInternalFrame {

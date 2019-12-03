@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.systec.dal;
+package br.com.systec.dao;
 
 import java.sql.*;
 

@@ -6,7 +6,7 @@
 package br.com.systec.telas;
 
 import java.sql.*;
-import br.com.systec.dal.ModuloConexao;
+import br.com.systec.dao.ModuloConexao;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
