@@ -49,7 +49,7 @@ public class TelaCliente extends javax.swing.JInternalFrame {
                 JOptionPane.showMessageDialog(null, "Preencha todos os campos obrigatórios");
             } else {
 
-// atualiza a tabela usuários com os dados do formulário
+// atualiza a tabela cliente com os dados do formulário
                 // usada para confirmar a inserção dos dados na tabela
                 int adicionado = pst.executeUpdate();
                 // entendimento da lógica
@@ -98,10 +98,9 @@ public class TelaCliente extends javax.swing.JInternalFrame {
         txtCliEmail.setText(tblClientes.getModel().getValueAt(setar, 3).toString());
         txtCliTel.setText(tblClientes.getModel().getValueAt(setar, 4).toString());
         txtCliEnd.setText(tblClientes.getModel().getValueAt(setar, 5).toString());
-        
+
         //desabilita o botão adicionar
-        btnAdicionar.setEnabled(false);
-        
+        btnCliAdicionar.setEnabled(false);
 
     }
     
@@ -138,7 +137,7 @@ public class TelaCliente extends javax.swing.JInternalFrame {
                     txtCliEmail.setText(null);
                     txtCliTel.setText(null);
                     txtCliEnd.setText(null);
-                    btnAdicionar.setEnabled(true);
+                    btnCliAdicionar.setEnabled(true);
                 }
             }
 
@@ -166,7 +165,7 @@ public class TelaCliente extends javax.swing.JInternalFrame {
                     txtCliEmail.setText(null);
                     txtCliTel.setText(null);
                     txtCliEnd.setText(null);
-                    btnAdicionar.setEnabled(true);
+                    btnCliAdicionar.setEnabled(true);
 
                 }
             } catch (Exception e) {
@@ -195,9 +194,9 @@ public class TelaCliente extends javax.swing.JInternalFrame {
         txtCliTel = new javax.swing.JTextField();
         txtCliEnd = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        btnAdicionar = new javax.swing.JButton();
-        btnAlterar = new javax.swing.JButton();
-        btnRemover = new javax.swing.JButton();
+        btnCliAdicionar = new javax.swing.JButton();
+        btnCliAlterar = new javax.swing.JButton();
+        btnCliRemover = new javax.swing.JButton();
         txtCliPesquisar = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -208,7 +207,7 @@ public class TelaCliente extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
-        setTitle("Cliente");
+        setTitle("Clientes");
         setPreferredSize(new java.awt.Dimension(640, 480));
 
         jLabel2.setText("*CPF");
@@ -223,27 +222,27 @@ public class TelaCliente extends javax.swing.JInternalFrame {
 
         jLabel7.setText("*Campos Obrigatórios");
 
-        btnAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_add_48761.png"))); // NOI18N
-        btnAdicionar.setPreferredSize(new java.awt.Dimension(80, 80));
-        btnAdicionar.addActionListener(new java.awt.event.ActionListener() {
+        btnCliAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_add_48761.png"))); // NOI18N
+        btnCliAdicionar.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnCliAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicionarActionPerformed(evt);
+                btnCliAdicionarActionPerformed(evt);
             }
         });
 
-        btnAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_edit_48763.png"))); // NOI18N
-        btnAlterar.setPreferredSize(new java.awt.Dimension(80, 80));
-        btnAlterar.addActionListener(new java.awt.event.ActionListener() {
+        btnCliAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_edit_48763.png"))); // NOI18N
+        btnCliAlterar.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnCliAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAlterarActionPerformed(evt);
+                btnCliAlterarActionPerformed(evt);
             }
         });
 
-        btnRemover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_delete_48762.png"))); // NOI18N
-        btnRemover.setPreferredSize(new java.awt.Dimension(80, 80));
-        btnRemover.addActionListener(new java.awt.event.ActionListener() {
+        btnCliRemover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_delete_48762.png"))); // NOI18N
+        btnCliRemover.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnCliRemover.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRemoverActionPerformed(evt);
+                btnCliRemoverActionPerformed(evt);
             }
         });
 
@@ -292,12 +291,12 @@ public class TelaCliente extends javax.swing.JInternalFrame {
                     .addComponent(txtCliId, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCliCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCliNome, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtCliEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCliTel, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -305,11 +304,11 @@ public class TelaCliente extends javax.swing.JInternalFrame {
                 .addGap(21, 21, 21))
             .addGroup(layout.createSequentialGroup()
                 .addGap(140, 140, 140)
-                .addComponent(btnAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnCliAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(166, 166, 166)
-                .addComponent(btnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnCliAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(162, 162, 162)
-                .addComponent(btnRemover, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnCliRemover, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(60, 60, 60)
@@ -359,19 +358,19 @@ public class TelaCliente extends javax.swing.JInternalFrame {
                             .addComponent(txtCliNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRemover, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCliAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCliAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCliRemover, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40))
         );
 
         setBounds(0, 0, 844, 497);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarActionPerformed
+    private void btnCliAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCliAdicionarActionPerformed
         // método para adicionar clientes
         adicionar();
-    }//GEN-LAST:event_btnAdicionarActionPerformed
+    }//GEN-LAST:event_btnCliAdicionarActionPerformed
 
 // evento abaixo é do tipo "enquanto for digitando"
     private void txtCliPesquisarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCliPesquisarKeyReleased
@@ -384,21 +383,21 @@ public class TelaCliente extends javax.swing.JInternalFrame {
         setar_campos();
     }//GEN-LAST:event_tblClientesMouseClicked
 
-    private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
+    private void btnCliAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCliAlterarActionPerformed
         // chama método para alterar cliente
         alterar();
-    }//GEN-LAST:event_btnAlterarActionPerformed
+    }//GEN-LAST:event_btnCliAlterarActionPerformed
 
-    private void btnRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverActionPerformed
+    private void btnCliRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCliRemoverActionPerformed
         // chama método para remover cliente
         remover();
-    }//GEN-LAST:event_btnRemoverActionPerformed
+    }//GEN-LAST:event_btnCliRemoverActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdicionar;
-    private javax.swing.JButton btnAlterar;
-    private javax.swing.JButton btnRemover;
+    private javax.swing.JButton btnCliAdicionar;
+    private javax.swing.JButton btnCliAlterar;
+    private javax.swing.JButton btnCliRemover;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -98,6 +98,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         menCadFun.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.ALT_MASK));
         menCadFun.setText("Funcionário");
+        menCadFun.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menCadFunActionPerformed(evt);
+            }
+        });
         menCad.add(menCadFun);
 
         menCadFor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_MASK));
@@ -194,9 +199,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblUsuario)
@@ -257,6 +260,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         cliente.setVisible(true);
         Desktop.add(cliente);
     }//GEN-LAST:event_menCadCliActionPerformed
+
+    private void menCadFunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menCadFunActionPerformed
+        
+        // chama TelaFuncionario
+        TelaFuncionario funcionario = new TelaFuncionario();
+        funcionario.setVisible(true);
+        Desktop.add(funcionario);
+    }//GEN-LAST:event_menCadFunActionPerformed
 
     /**
      * @param args the command line arguments
