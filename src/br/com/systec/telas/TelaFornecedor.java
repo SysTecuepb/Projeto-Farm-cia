@@ -6,7 +6,7 @@
 package br.com.systec.telas;
 
 import java.sql.*;
-import br.com.systec.dao.ModuloConexao;
+import br.com.systec.dal.ModuloConexao;
 import javax.swing.JOptionPane;
 //importa recursos da biblioteca rs2xml.jar
 import net.proteanit.sql.DbUtils;
@@ -234,6 +234,7 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
         jLabel2.setText("*CNPJ");
 
         btnForAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_add_48761.png"))); // NOI18N
+        btnForAdicionar.setToolTipText("Adicionar");
         btnForAdicionar.setPreferredSize(new java.awt.Dimension(80, 80));
         btnForAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,6 +249,7 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
         txtForId.setEnabled(false);
 
         btnForAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_edit_48763.png"))); // NOI18N
+        btnForAlterar.setToolTipText("Alterar");
         btnForAlterar.setPreferredSize(new java.awt.Dimension(80, 80));
         btnForAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -260,6 +262,7 @@ public class TelaFornecedor extends javax.swing.JInternalFrame {
         jLabel4.setText("Email");
 
         btnForRemover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_delete_48762.png"))); // NOI18N
+        btnForRemover.setToolTipText("Remover");
         btnForRemover.setPreferredSize(new java.awt.Dimension(80, 80));
         btnForRemover.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

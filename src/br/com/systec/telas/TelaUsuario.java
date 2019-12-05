@@ -10,7 +10,7 @@ package br.com.systec.telas;
  * @author Júnior
  */
 import java.sql.*;
-import br.com.systec.dao.ModuloConexao;
+import br.com.systec.dal.ModuloConexao;
 import javax.swing.JOptionPane;
 
 public class TelaUsuario extends javax.swing.JInternalFrame {
@@ -216,6 +216,7 @@ public class TelaUsuario extends javax.swing.JInternalFrame {
         cboUsuPerfil.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "admin", "user" }));
 
         btnUsuCreate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/create.png"))); // NOI18N
+        btnUsuCreate.setToolTipText("Adicionar");
         btnUsuCreate.setPreferredSize(new java.awt.Dimension(80, 80));
         btnUsuCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,6 +225,7 @@ public class TelaUsuario extends javax.swing.JInternalFrame {
         });
 
         btnUsuRead.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/read.png"))); // NOI18N
+        btnUsuRead.setToolTipText("Consultar");
         btnUsuRead.setPreferredSize(new java.awt.Dimension(80, 80));
         btnUsuRead.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -232,6 +234,7 @@ public class TelaUsuario extends javax.swing.JInternalFrame {
         });
 
         btnUsuUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/update.png"))); // NOI18N
+        btnUsuUpdate.setToolTipText("Alterar");
         btnUsuUpdate.setPreferredSize(new java.awt.Dimension(80, 80));
         btnUsuUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -240,6 +243,7 @@ public class TelaUsuario extends javax.swing.JInternalFrame {
         });
 
         btnUsuDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/delete.png"))); // NOI18N
+        btnUsuDelete.setToolTipText("Remover");
         btnUsuDelete.setPreferredSize(new java.awt.Dimension(80, 80));
         btnUsuDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

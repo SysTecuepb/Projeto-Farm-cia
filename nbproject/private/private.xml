@@ -3,7 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/Users/Júnior/Documents/NetBeansProjects/hidedelegate/prjfarmacia/src/br/com/systec/telas/TelaCliente.java</file>
+            <file>file:/E:/Users/Júnior/Documents/NetBeansProjects/hidedelegate/farmacia/prjfarmacia/src/br/com/systec/dal/ModuloConexao.java</file>
+            <file>file:/E:/Users/Júnior/Documents/NetBeansProjects/hidedelegate/farmacia/prjfarmacia/src/br/com/systec/telas/TelaFornecedor.java</file>
+            <file>file:/E:/Users/Júnior/Documents/NetBeansProjects/hidedelegate/farmacia/prjfarmacia/src/br/com/systec/telas/TelaFuncionario.java</file>
+            <file>file:/E:/Users/Júnior/Documents/NetBeansProjects/hidedelegate/farmacia/prjfarmacia/src/br/com/systec/telas/TelaProduto.java</file>
+            <file>file:/E:/Users/Júnior/Documents/NetBeansProjects/hidedelegate/farmacia/prjfarmacia/src/br/com/systec/telas/TelaPrincipal.java</file>
+            <file>file:/E:/Users/Júnior/Documents/NetBeansProjects/hidedelegate/farmacia/prjfarmacia/src/br/com/systec/telas/TelaCliente.java</file>
         </group>
     </open-files>
 </project-private>

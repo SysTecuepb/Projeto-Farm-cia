@@ -6,7 +6,7 @@
 package br.com.systec.telas;
 
 import java.sql.*;
-import br.com.systec.dao.ModuloConexao;
+import br.com.systec.dal.ModuloConexao;
 import javax.swing.JOptionPane;
 //importa recursos da biblioteca rs2xml.jar
 import net.proteanit.sql.DbUtils;
@@ -223,6 +223,7 @@ public class TelaCliente extends javax.swing.JInternalFrame {
         jLabel7.setText("*Campos Obrigatórios");
 
         btnCliAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_add_48761.png"))); // NOI18N
+        btnCliAdicionar.setToolTipText("Adicionar");
         btnCliAdicionar.setPreferredSize(new java.awt.Dimension(80, 80));
         btnCliAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -231,6 +232,7 @@ public class TelaCliente extends javax.swing.JInternalFrame {
         });
 
         btnCliAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_edit_48763.png"))); // NOI18N
+        btnCliAlterar.setToolTipText("Alterar");
         btnCliAlterar.setPreferredSize(new java.awt.Dimension(80, 80));
         btnCliAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,6 +241,7 @@ public class TelaCliente extends javax.swing.JInternalFrame {
         });
 
         btnCliRemover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_delete_48762.png"))); // NOI18N
+        btnCliRemover.setToolTipText("Remover");
         btnCliRemover.setPreferredSize(new java.awt.Dimension(80, 80));
         btnCliRemover.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

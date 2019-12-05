@@ -6,7 +6,7 @@
 package br.com.systec.telas;
 
 import java.sql.*;
-import br.com.systec.dao.ModuloConexao;
+import br.com.systec.dal.ModuloConexao;
 import javax.swing.JOptionPane;
 //importa recursos da biblioteca rs2xml.jar
 import net.proteanit.sql.DbUtils;
@@ -239,6 +239,7 @@ public class TelaProduto extends javax.swing.JInternalFrame {
         setPreferredSize(new java.awt.Dimension(640, 480));
 
         btnProRemover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_delete_48762.png"))); // NOI18N
+        btnProRemover.setToolTipText("Remover");
         btnProRemover.setPreferredSize(new java.awt.Dimension(80, 80));
         btnProRemover.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -249,6 +250,7 @@ public class TelaProduto extends javax.swing.JInternalFrame {
         jLabel2.setText("*Cód");
 
         btnProAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_add_48761.png"))); // NOI18N
+        btnProAdicionar.setToolTipText("Adicionar");
         btnProAdicionar.setPreferredSize(new java.awt.Dimension(80, 80));
         btnProAdicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -271,6 +273,7 @@ public class TelaProduto extends javax.swing.JInternalFrame {
         txtProId.setEnabled(false);
 
         btnProAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/systec/icones/iconfinder_file_edit_48763.png"))); // NOI18N
+        btnProAlterar.setToolTipText("Alterar");
         btnProAlterar.setPreferredSize(new java.awt.Dimension(80, 80));
         btnProAlterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
