@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="imprimifuncionario" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="95a362c9-851b-48d3-a1e8-37a07c06e309">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="funcionario" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from tb_funcionario where id_funcionario = $P{funcionario}]]>
+	</queryString>
+	<field name="id_funcionario" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cpf_funcionario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome_funcionario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email_funcionario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefone_funcionario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endereco_funcionario" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="366" y="0" width="189" height="20" uuid="8fce7012-b144-4b10-9d00-cf8b4d36d3a5"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="266" y="59" width="100" height="20" uuid="f01834ea-bc5e-451d-994f-60b47227f7c9"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FUNCIONÁRIO]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="239" height="79" uuid="933a785b-e5ea-4604-af72-b357d1e6c650"/>
+				<imageExpression><![CDATA["E:\\Users\\Júnior\\Documents\\NetBeansProjects\\hidedelegate\\farmacia\\prjfarmacia\\src\\br\\com\\systec\\icones\\computador-pc-com-monitor_318-50338.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="29" height="20" uuid="5a3b55e9-83c5-4c41-8704-88d146e5f8a5"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="0" width="75" height="20" uuid="ebcd175e-1792-4852-909c-2a4a2b8d269a"/>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="0" width="115" height="20" uuid="1592c7fc-8dc0-463b-8b96-ce2d8a339498"/>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="0" width="100" height="20" uuid="db57e483-cbb0-4fe2-8a92-c04287a6e2a9"/>
+				<text><![CDATA[EMAIL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="0" width="73" height="20" uuid="c39a7029-9684-4e4b-91f6-2e324aecf8de"/>
+				<text><![CDATA[TELEFONE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="0" width="163" height="20" uuid="91276dd3-be53-471d-9867-31072aae638e"/>
+				<text><![CDATA[ENDEREÇO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="29" height="20" uuid="c75f7fd8-4a3e-434a-89fc-ab2855e5e28d"/>
+				<textFieldExpression><![CDATA[$F{id_funcionario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="29" y="0" width="75" height="20" uuid="0ae83614-105a-4e97-b63d-ffe7f5225a88"/>
+				<textFieldExpression><![CDATA[$F{cpf_funcionario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="104" y="0" width="115" height="20" uuid="072c31cb-868b-4e11-9f29-55ed333fc747"/>
+				<textFieldExpression><![CDATA[$F{nome_funcionario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="0" width="100" height="20" uuid="c100c4cd-1976-43e8-844b-0dcef969e6e5"/>
+				<textFieldExpression><![CDATA[$F{email_funcionario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="319" y="0" width="73" height="20" uuid="46496336-3603-4b91-9b98-d6ad1835b62a"/>
+				<textFieldExpression><![CDATA[$F{telefone_funcionario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="0" width="163" height="20" uuid="21dfab8a-1410-4f03-b792-2060c68d141a"/>
+				<textFieldExpression><![CDATA[$F{endereco_funcionario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

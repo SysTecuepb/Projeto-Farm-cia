@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="imprimifornecedor" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7f76033c-4c25-46b9-af53-9dcdd2eeba3c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="fornecedor" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from tb_fornecedor where id_fornecedor = $P{fornecedor}]]>
+	</queryString>
+	<field name="id_fornecedor" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cnpj_fornecedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome_fornecedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email_fornecedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefone_fornecedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="endereco_fornecedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="239" height="79" uuid="cb7c4663-af0f-480a-a5b8-89681cdf2743"/>
+				<imageExpression><![CDATA["E:\\Users\\Júnior\\Documents\\NetBeansProjects\\hidedelegate\\farmacia\\prjfarmacia\\src\\br\\com\\systec\\icones\\computador-pc-com-monitor_318-50338.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="366" y="0" width="189" height="20" uuid="c3706f20-2719-4638-995a-a0c9a290aee9"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="276" y="59" width="100" height="20" uuid="bcf76af2-c50a-417f-9fba-47d30a66b4e7"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FORNECEDOR]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="27" height="20" uuid="67dd458f-9130-4137-adaa-3ec6a3fd24c0"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="0" width="93" height="20" uuid="ae721457-7551-4395-9f1c-300c6ba24c26"/>
+				<text><![CDATA[CNPJ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="0" width="108" height="20" uuid="7d073b1b-f740-4802-8070-bba6dd9ff796"/>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="0" width="109" height="20" uuid="0dc3b700-e534-4774-9da7-20375736e448"/>
+				<text><![CDATA[EMAIL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="337" y="0" width="79" height="20" uuid="a8933999-6982-4c0a-aac4-f350a6e2c3ff"/>
+				<text><![CDATA[TELEFONE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="0" width="139" height="20" uuid="931157e5-004b-4e5d-9a9d-2b779d5a94e5"/>
+				<text><![CDATA[ENDEREÇO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="27" height="20" uuid="f995dafe-6b62-4e40-8c60-a8c67a18c31b"/>
+				<textFieldExpression><![CDATA[$F{id_fornecedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="27" y="0" width="93" height="20" uuid="0d66d0b5-826f-4cde-b315-9927ce352805"/>
+				<textFieldExpression><![CDATA[$F{cnpj_fornecedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="108" height="20" uuid="74f5e952-3351-4aeb-82ac-73ede005d1ba"/>
+				<textFieldExpression><![CDATA[$F{nome_fornecedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="109" height="20" uuid="09badb05-12ed-4cda-b200-4af2726d24e9"/>
+				<textFieldExpression><![CDATA[$F{email_fornecedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="337" y="0" width="79" height="20" uuid="61051b0c-227c-4fa2-8ce8-f207f06e2185"/>
+				<textFieldExpression><![CDATA[$F{telefone_fornecedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="0" width="139" height="20" uuid="502a5e93-aeef-4fb5-80d2-2fcb0eafc516"/>
+				<textFieldExpression><![CDATA[$F{endereco_fornecedor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

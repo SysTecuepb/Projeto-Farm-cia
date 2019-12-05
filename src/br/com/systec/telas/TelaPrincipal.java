@@ -344,7 +344,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void menRelCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menRelCliActionPerformed
         // gera relatório cliente
-        int confirma = JOptionPane.showConfirmDialog(null, "Confirma a impressão desse relatório?", "Atenção", JOptionPane.YES_NO_OPTION);
+        int confirma = JOptionPane.showConfirmDialog(null, "Confirma a Emissão desse relatório?", "Atenção", JOptionPane.YES_NO_OPTION);
         if (confirma == JOptionPane.YES_OPTION) {
             //imprimindo relatório com o framework JasperReport
             try {
@@ -361,7 +361,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void menRelFunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menRelFunActionPerformed
         // gera relatório funcionário
-        int confirma = JOptionPane.showConfirmDialog(null, "Confirma a impressão desse relatório?", "Atenção", JOptionPane.YES_NO_OPTION);
+        int confirma = JOptionPane.showConfirmDialog(null, "Confirma a Emissão desse relatório?", "Atenção", JOptionPane.YES_NO_OPTION);
         if (confirma == JOptionPane.YES_OPTION) {
             //imprimindo relatório com o framework JasperReport
             try {
@@ -378,7 +378,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void menRelForActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menRelForActionPerformed
         // gera relatório fornecedor
-        int confirma = JOptionPane.showConfirmDialog(null, "Confirma a impressão desse relatório?", "Atenção", JOptionPane.YES_NO_OPTION);
+        int confirma = JOptionPane.showConfirmDialog(null, "Confirma a Emissão desse relatório?", "Atenção", JOptionPane.YES_NO_OPTION);
         if (confirma == JOptionPane.YES_OPTION) {
             //imprimindo relatório com o framework JasperReport
             try {
@@ -395,7 +395,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void menRelProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menRelProActionPerformed
         // gera relatório produto
-        int confirma = JOptionPane.showConfirmDialog(null, "Confirma a impressão desse relatório?", "Atenção", JOptionPane.YES_NO_OPTION);
+        int confirma = JOptionPane.showConfirmDialog(null, "Confirma a Emissão desse relatório?", "Atenção", JOptionPane.YES_NO_OPTION);
         if (confirma == JOptionPane.YES_OPTION) {
             //imprimindo relatório com o framework JasperReport
             try {
