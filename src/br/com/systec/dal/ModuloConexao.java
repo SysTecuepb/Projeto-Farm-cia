@@ -24,7 +24,7 @@ public class ModuloConexao {
         // armazenando informações referente ao banco
         String url = "jdbc:mysql://localhost:3306/bd_farmacia";
         String user = "root";
-        String password = "";
+        String password = "root";
 
         // estabelecendo a conexão com o banco
         try {
