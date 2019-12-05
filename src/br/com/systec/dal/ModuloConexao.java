@@ -14,7 +14,9 @@ import java.sql.*;
  */
 public class ModuloConexao {
 
-    // método para conexão com o banco de dados
+    /* método para conexão com o banco de dados
+    */
+    
     public static Connection conector() {
         java.sql.Connection conexao = null;
 
